@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>SINF 2018/19</title>
+    	<meta name="description" content="">
+		<meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		
+		 <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/templatemo_misc.css">
+        <link rel="stylesheet" href="css/templatemo_style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+
+#lab{
+	  font-size: 20px;
+	  font-weight: bold;
+
+}
+#QuestionText{
+}
+#formTo{
+	width:10%;
+}
+.panel-heading:hover{
+	opacity: 0.5;
+}
+.nav{
+	font-size:18px;
+	font-family: Helvetica;
+}
+@keyframes jump {
+  0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+  40%  {transform: translate3d(0,30%,0) scale3d(.9,1.5,1);}
+  100% {transform: translate3d(0,70%,0) scale3d(1,1,1);}
+}
+.jump:hover {
+  transform-origin: 50% 50%;
+  animation: jump .7s linear alternate infinite;
+}
+</style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+		<!-- a helper script for vaidating the form-->
+		<script language="JavaScript" src="js/gen_validatorv31.js" type="text/javascript"></script>
+		
+    </head>
+    <body  ontouchstart="">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+				
+		<nav class="navbar navbar-inverse  navbar-fixed-top" >
+			<div class="container-fluid" >
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="#" id="lab" style="font-size: 20px;text-shadow: 1px 1px #cccccc;"> Hydroponic greenhouse</a>
+				</div>
+				
+				<ul class="nav navbar-nav">
+				  <li><a href="#send" >Send Information</a></li>
+				  <li><a  href="index2.html">Query Topic</a></li>
+				</ul>
+			 </div>
+		</nav>
+		
+						
+        <div class="content-section" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="heading-section col-md-12 text-center strong animated fadeInLeftBig">
+                        <h2 style="font-size: 40px;text-shadow: 4px 4px #cccccc;"><i class="fas fa-file-upload " ></i> Query Submission</h2><br><br><br><br>
+						<img src="images/db.png"  class="img-responsive center-block jump" alt="Chania" height="100" width="100"><br><br><br><br>
+					</div> <!-- /.heading-section -->
+                </div> <!-- /.row -->
+
+                <div class="row animated fadeInLeftBig">
+                    <div class="col-md-12">
+                        <div class="contact-form" id="sub" >
+						
+                            <form method="post" action="has.php" name="contactform">
+
+                                <div class="radio" style="margin-left:12% ; ">
+									<div class="radioL">
+
+									  <input class="form-check-input" type="radio" data-toggle="collapse" data-target="#answerOneEasy:not(.show)" name="Complexity" id="exampleRadios1" value="Easy" CHECKED>
+										<label for="exampleRadios1" id="lab" >Easy Complexity</label><br>
+									  </p>
+									  <p>
+										<input class="form-check-input" type="radio" data-toggle="collapse" data-target="#answerTwoMedium:not(.show)" aria-expanded="true" aria-controls="collapseTwo" name="Complexity" id="exampleRadios3" value="Medium" >
+										<label for="exampleRadios3" id="lab" >Medium Complexity</label>
+									  </p>
+									</div>
+									<div class="radioR">
+									
+									  <input type="radio" id="OFF" name="Debug" value="OFF" checked>
+										<label for="OFF" id="lab">Debug OFF</label><br>
+									  </p>
+									  <p>
+										<input type="radio" id="ON" name="Debug" value="ON">
+										<label for="ON" id="lab">Debug ON</label>
+									  </p>
+									</div>
+                                </div><br><br>
+								 
+								 <div class="container-fluid" >
+									<div id="faq" role="tablist" aria-multiselectable="true">
+										<div class="panel panel-default" id="easySect">
+											<div class="panel-heading" role="tab" id="questionOne">
+												<h5 class="panel-title">
+												<a data-toggle="collapse" data-parent="#faq" href="#answerOneEasy" aria-expanded="false" aria-controls="answerOneEasy">
+													<h3 style="text-align:center"> Easy Query </h3>
+												</a>
+												</h5>
+											</div>
+											<div id="answerOneEasy" class="panel-collapse collapse " role="tabpanel" aria-labelledby="answerOneEasy">
+												<div class="panel-body">
+													<div class="row">
+														<div class="row" style="height:50%;width:150%">
+															<div class="col-md-8" id="asda">
+																<a id="QuestionText" style="margin-left:1em ">1.Sensor Data</a>
+																<select id="formTo" class="mdb-select md-form" name="Sensor1E" style="margin-left:4.7em; ">
+																	<option value="temp3"  selected>Sensor</option>
+																	<option value="temp1">temp1</option>
+																	<option value="hum1">hum1</option>
+																	<option value="corrente1">corrente1</option>
+																	<option value="light1">light1</option>
+																	<option value="temp2">temp2</option>
+																	<option value="hum2">hum2</option>
+																	<option value="corrente2">corrente2</option>
+																	<option value="light2">light2</option>
+																	<option value="temp3" >temp3</option>
+																	<option value="hum3">hum3</option>
+																	<option value="corrente3">corrente3</option>
+																	<option value="temp4">temp4</option>
+																	<option value="hum4">hum4</option>
+																	<option value="corrente4">corrente4</option>
+																	<option value="light4">light4</option>
+																</select>
+																<select id="formTo" class="mdb-select md-form" name="Room1E" style="margin-left:1em ; ">
+																	<option value="MORANGOS"  selected>Room</option>
+																	<option value="EXTERIOR">Exterior</option>
+																	<option value="ALFACES">Alfaces</option>
+																	<option value="MORANGOS">Morangos</option>
+																</select>
+																<input type="datetime-local" id="meeting-time"
+																   name="TempoInicial1E" value="2019-05-22T00:30"
+																   min="2019-05-12T19:30" style="width:190px;margin-left:1em" >
+																<input type="datetime-local" id="meeting-time"
+																   name="TempoFinal1E" value="2019-05-24T00:30"
+																   min="2019-05-12T19:30" style="width:190px;margin-left:1em" >
+															</div><br><br><br>
+															<div class="col-md-8">
+																<a id="QuestionText"  style="margin-left:1em ">3.Configuration Data</a>
+																<select id="formTo" class="mdb-select md-form" name="Sensor3E" style="margin-left:2.1em; ">
+																	<option value="temp"  selected>Tipo Sensor</option>
+																	<option value="temp">temp</option>
+																	<option value="hum">hum</option>
+																	<option value="corrente">corrente</option>
+																	<option value="light">light</option>
+																</select>
+																<select id="formTo" class="mdb-select md-form" name="Mote13E" style="margin-left:1em ; ">
+																	<option value="1"  selected>Mote 1</option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																</select>
+																<select id="formTo" class="mdb-select md-form" name="Mote23E" style="margin-left:1em;">
+																	<option value="2"  selected>Mote 2</option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																</select>
+															</div><br><br><br>
+															<div class="col-md-8">
+																<a id="QuestionText" style="margin-left:1em ">4.Rules Data</a>
+																<select id="formTo" class="mdb-select md-form" name="Sensor4E" style="margin-left:5.4em; ">
+																	<option value="hum2"  selected>Sensor</option>
+																	<option value="temp1">temp1</option>
+																	<option value="hum1">hum1</option>
+																	<option value="corrente1">corrente1</option>
+																	<option value="light1">light1</option>
+																	<option value="temp2">temp2</option>
+																	<option value="hum2">hum2</option>
+																	<option value="corrente2">corrente2</option>
+																	<option value="light2">light2</option>
+																	<option value="temp3" >temp3</option>
+																	<option value="hum3">hum3</option>
+																	<option value="corrente3">corrente3</option>
+																	<option value="temp4">temp4</option>
+																	<option value="hum4">hum4</option>
+																	<option value="corrente4">corrente4</option>
+																	<option value="light4">light4</option>
+																</select>
+																<input id="formTo" type="number" name="Valor4E" min="0"  value="14" style=";margin-left:1em;">
+															</div>
+															<div class="col-md-8">
+																<a id="QuestionText" style="margin-left:1em ">5. Energy Data</a>
+																<select id="formTo" class="mdb-select md-form" name="Room5E" style=";margin-left:4.5em;">
+																	<option value="MORANGOS"  selected>Room</option>
+																	<option value="EXTERIOR">Exterior</option>
+																	<option value="ALFACES">Alfaces</option>
+																	<option value="MORANGOS">Morangos</option>
+																</select>
+																<input type="datetime-local" id="meeting-time"
+																   name="TempoInicial5E" value="2019-05-22T19:30"
+																   min="2019-05-20T19:30" style="width:190px;margin-left:1em" >
+																<input type="datetime-local" id="meeting-time"
+																   name="TempoFinal5E" value="2019-05-24T15:33"
+																   min="2019-05-20T19:30" style="width:190px;margin-left:1em" >
+																
+															</div>
+													    </div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default " id="medSect" >
+											<div class="panel-heading" role="tab" id="questionTwo">
+												<h5 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#faq" href="#answerTwoMedium" aria-expanded="false" aria-controls="answerTwo">
+													<h3 style="text-align:center"> Medium Query </h3>
+												</a>
+												</h5>
+											</div>
+											<div id="answerTwoMedium" class="panel-collapse collapse " role="tabpanel" aria-labelledby="questionTwo">
+												<div class="panel-body">
+													<div class="row">
+														<div class="row" style="height:50%;width:150%">
+															<div class="col-md-8">
+																<a id="QuestionText" style="margin-left:1em ">1.Sensor Data</a>
+																<select id="formTo" class="mdb-select md-form" name="Sensor1M" style="margin-left:4.7em; ">
+																	<option value="temp"  selected>Tipo Sensor</option>
+																	<option value="temp">temp</option>
+																	<option value="hum">hum</option>
+																	<option value="corrente">corrente</option>
+																	<option value="light">light</option>
+																</select>
+																<input type="datetime-local" id="meeting-time"
+																   name="TempoInicial1M" value="2019-05-22T00:30"
+																   min="2019-05-12T19:30" style="width:190px;margin-left:1em" >
+																<input type="datetime-local" id="meeting-time"
+																   name="TempoFinal1M" value="2019-05-24T00:30"
+																   min="2019-05-12T19:30" style="width:190px;margin-left:1em" >
+															</div><br><br><br>
+															<div class="col-md-8">
+																<a id="QuestionText"  style="margin-left:1em ">2.Actuador Data</a>
+																<select id="formTo" class="mdb-select md-form" name="Actuador2M" style="margin-left:3.7em; ">
+																	<option value="FAN"  selected>Tipo Atuador</option>
+																	<option value="FAN">Fan</option>
+																	<option value="HEATER">Heater</option>
+																	<option value="LIGHT">Light</option>
+																	<option value="ELECTROVALVE">Electrovalve</option>
+																</select>
+																<input type="datetime-local" id="meeting-time"
+																   name="TempoInicial2M" value="2019-05-22T00:30"
+																   min="2019-05-12T19:30" style="width:190px;margin-left:1em" >
+																<input type="datetime-local" id="meeting-time"
+																   name="TempoFinal2M" value="2019-05-24T00:30"
+																   min="2019-05-12T19:30" style="width:190px;margin-left:1em" >
+															</div><br><br><br>
+															<div class="col-md-8">
+																<a id="QuestionText" style="margin-left:1em ">5. Energy Data</a>
+																<input type="datetime-local" id="meeting-time"
+																   name="TempoInicial5M" value="2019-05-22T19:30"
+																   min="2019-05-20T19:30" style="width:190px;margin-left:4.4em" >
+																<input type="datetime-local" id="meeting-time"
+																   name="TempoFinal5M" value="2019-05-24T15:33"
+																   min="2019-05-20T19:30" style="width:190px;margin-left:1em" >
+																
+															</div>
+													    </div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br><br>
+                                <p id="send" ><input type="submit" style="font-weight: bold;font-size: 20px;text-shadow: 1px 1px #cccccc;" name='submit' class="btn btn-danger btn-lg" value="Send Information"></p>
+								</div>
+								</div>
+                            </form>
+                        
+                </div> <!-- /.col-md-5 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-xs-12 text-left">
+                        Copyright © 2018/19 SINF - FEUP
+                     </div>
+					 
+
+                </div> <!-- /.row -->
+				<div class="row">
+					 <div class="col-md-8 col-xs-12 text-left">
+                       Fábio Morais <br> Alberto Santos <br> Rita Ferreira
+                     </div>
+				</div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /#footer -->
+
+
+ 
+	<script> 
+	document.querySelector('#easySect').style.display = 'initial';
+	document.querySelector('#answerOneEasy').style.display = 'initial';
+	document.querySelector('#medSect').style.display = 'none';
+	document.getElementById("exampleRadios1").addEventListener("click", function(){
+		document.querySelector('#easySect').style.display = 'initial';
+		 document.querySelector('#answerOneEasy').style.display = 'initial';
+		 document.querySelector('#answerTwoMedium').style.display = 'none';
+		 document.querySelector('#medSect').style.display = 'none';
+	}, false);
+	document.getElementById("exampleRadios3").addEventListener("click", function(){
+		 document.querySelector('#medSect').style.display = 'initial';
+		 document.querySelector('#answerTwoMedium').style.display = 'initial';
+		 document.querySelector('#answerOneEasy').style.display = 'none';
+		 document.querySelector('#easySect').style.display = 'none';
+	}, false);
+	
+
+</script>
+    </body>
+</html>
